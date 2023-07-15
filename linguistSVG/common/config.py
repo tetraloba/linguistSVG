@@ -1,5 +1,5 @@
 settings = {
-    'path': '/home/tetraloba/KagawaU',
+    'path': '/home/tetraloba/projects/competitiveProgramming',
     'langs' : { # 'Lang':((r, g, b), ('ext1', 'ext2', 'ext3'...))
         'C':((120, 120, 120), ('c', )),
         'C++':((255, 120, 120), ('cpp', 'c++', )),

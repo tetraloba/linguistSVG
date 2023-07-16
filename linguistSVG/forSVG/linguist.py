@@ -22,7 +22,7 @@ sizes_list = sorted(sizes_dict.items(), key=lambda x:x[1], reverse=True) # 降�
 
 # SVGファイルの生成
 width = 1000
-char_size = 10
+char_size = 40
 bar_height = char_size
 background_color = RGB(0, 0, 0)
 svg = SVG('linguist.svg', 0, 0, width, bar_height + char_size * sizes_list.__len__(), unit='px')
@@ -37,6 +37,6 @@ for lang, size in sizes_list:
 for i, (lang, size) in enumerate(sizes_list):
     if size != 0:
         r, g, b = settings['langs'][lang][0] # todo 例外処理すべき
-        svg.circle(char_size / 2, bar_height + char_size * i + char_size / 2, char_size / 2, RGB(r, g, b), stroke_width=0)
+        svg.circle(char_size / 2, bar_height + char_size * i + char_size / 2, char_size / 2.5, RGB(r, g, b), stroke_width=0)
         svg.text(char_size, bar_height + char_size * i + char_size, f"{lang} {round(size * 100, '0.1')}%", font_size=char_size, fill_color=RGB(255, 255, 255), stroke_width=0)
 
